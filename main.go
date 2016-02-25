@@ -14,12 +14,12 @@ import (
 )
 
 type Config struct {
-	JIRAURL           string `env:"SLACK_JIRA_BOT_JIRA_URL"`
-	JIRAUsername      string `env:"SLACK_JIRA_BOT_JIRA_USERNAME"`
-	JIRAPassword      string `env:"SLACK_JIRA_BOT_JIRA_PASSWORD"`
-	JIRAAgileBoard    string `env:"SLACK_JIRA_BOT_JIRA_AGILE_BOARD"`
-	JIRAProjectPrefix string `env:"SLACK_JIRA_BOT_JIRA_PROJECT_PREFIX"`
-	SlackToken        string `env:"SLACK_JIRA_BOT_SLACK_TOKEN"`
+	JIRAURL           string `env:"SLACK_JIRA_BOT_JIRA_URL,required"`
+	JIRAUsername      string `env:"SLACK_JIRA_BOT_JIRA_USERNAME,required"`
+	JIRAPassword      string `env:"SLACK_JIRA_BOT_JIRA_PASSWORD,required"`
+	JIRAAgileBoard    string `env:"SLACK_JIRA_BOT_JIRA_AGILE_BOARD,required"`
+	JIRAProjectPrefix string `env:"SLACK_JIRA_BOT_JIRA_PROJECT_PREFIX,required"`
+	SlackToken        string `env:"SLACK_JIRA_BOT_SLACK_TOKEN,required"`
 }
 
 type SlackJIRABot struct {
